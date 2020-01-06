@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DS2017
 {
-    public partial class Form1 : Form
+    public partial class Application : Form
     {
-        public Form1()
+        public Application()
         {
             InitializeComponent();
         }
