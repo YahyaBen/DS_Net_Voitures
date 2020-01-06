@@ -142,6 +142,7 @@
             this.Btn_Quitter.TabIndex = 8;
             this.Btn_Quitter.Text = "Quitter";
             this.Btn_Quitter.UseVisualStyleBackColor = true;
+            this.Btn_Quitter.Click += new System.EventHandler(this.Btn_Quitter_Click);
             // 
             // Btn_Rechercher
             // 
@@ -270,6 +271,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Application";
             this.Text = "Appication";
+            this.Load += new System.EventHandler(this.Application_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

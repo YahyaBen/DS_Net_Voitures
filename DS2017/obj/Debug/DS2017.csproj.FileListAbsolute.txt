@@ -1,0 +1,9 @@
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\bin\Debug\DS2017.exe.config
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\bin\Debug\DS2017.exe
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\bin\Debug\DS2017.pdb
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\obj\Debug\DS2017.csprojAssemblyReference.cache
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\obj\Debug\DS2017.Application.resources
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\obj\Debug\DS2017.Properties.Resources.resources
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\obj\Debug\DS2017.csproj.GenerateResource.cache
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\obj\Debug\DS2017.exe
+C:\Users\Hyrku\OneDrive\Desktop\ds\DS2017\obj\Debug\DS2017.pdb

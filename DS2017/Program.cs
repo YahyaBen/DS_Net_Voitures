@@ -16,14 +16,15 @@ namespace DS2017
         [STAThread]
         static void Main()
         {
-            System.Windows.Forms.Application.EnableVisualStyles();
-            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            System.Windows.Forms.Application.Run(new Application());
             Marques.Add(new marque("Volvo"));
             Marques.Add(new marque("Audi"));
             Marques.Add(new marque("Dacia"));
             Marques.Add(new marque("BMW"));
             Marques.Add(new marque("Kawazaki"));
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.Run(new Application());
+
 
         }
     }
