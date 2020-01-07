@@ -8,7 +8,7 @@ namespace DS2017
 {
     class marque
     {
-        static public int count = 0;
+        static public int count = 1;
         public int ID;
         public string libelle;
 

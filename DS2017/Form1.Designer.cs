@@ -46,6 +46,11 @@
             this.CB_Couleur = new System.Windows.Forms.ComboBox();
             this.CB_Marque = new System.Windows.Forms.ComboBox();
             this.DGV = new System.Windows.Forms.DataGridView();
+            this.DGV_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGV_Maricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGV_Portes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGV_Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGV_Marque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Btn_First = new System.Windows.Forms.Button();
             this.Btn_Last = new System.Windows.Forms.Button();
             this.Btn_Precedent = new System.Windows.Forms.Button();
@@ -101,11 +106,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 218);
+            this.label6.Location = new System.Drawing.Point(34, 217);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(110, 13);
             this.label6.TabIndex = 4;
-            this.label6.Text = "label1";
+            this.label6.Text = "Matricule a chercher :";
             // 
             // Btn_Ajouter
             // 
@@ -115,6 +120,7 @@
             this.Btn_Ajouter.TabIndex = 5;
             this.Btn_Ajouter.Text = "Ajouter";
             this.Btn_Ajouter.UseVisualStyleBackColor = true;
+            this.Btn_Ajouter.Click += new System.EventHandler(this.Btn_Ajouter_Click);
             // 
             // Btn_Modifier
             // 
@@ -124,6 +130,7 @@
             this.Btn_Modifier.TabIndex = 6;
             this.Btn_Modifier.Text = "Modifier";
             this.Btn_Modifier.UseVisualStyleBackColor = true;
+            this.Btn_Modifier.Click += new System.EventHandler(this.Btn_Modifier_Click);
             // 
             // Btn_Supprimer
             // 
@@ -133,6 +140,7 @@
             this.Btn_Supprimer.TabIndex = 7;
             this.Btn_Supprimer.Text = "Supprimer";
             this.Btn_Supprimer.UseVisualStyleBackColor = true;
+            this.Btn_Supprimer.Click += new System.EventHandler(this.Btn_Supprimer_Click);
             // 
             // Btn_Quitter
             // 
@@ -152,6 +160,7 @@
             this.Btn_Rechercher.TabIndex = 9;
             this.Btn_Rechercher.Text = "Rechercher";
             this.Btn_Rechercher.UseVisualStyleBackColor = true;
+            this.Btn_Rechercher.Click += new System.EventHandler(this.Btn_Rechercher_Click);
             // 
             // Txt_ID
             // 
@@ -170,9 +179,9 @@
             // 
             // Txt_Recherche
             // 
-            this.Txt_Recherche.Location = new System.Drawing.Point(133, 215);
+            this.Txt_Recherche.Location = new System.Drawing.Point(150, 210);
             this.Txt_Recherche.Name = "Txt_Recherche";
-            this.Txt_Recherche.Size = new System.Drawing.Size(188, 20);
+            this.Txt_Recherche.Size = new System.Drawing.Size(171, 20);
             this.Txt_Recherche.TabIndex = 12;
             // 
             // Txt_NbrPortes
@@ -200,11 +209,44 @@
             // 
             // DGV
             // 
+            this.DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_ID,
+            this.DGV_Maricule,
+            this.DGV_Portes,
+            this.DGV_Color,
+            this.DGV_Marque});
             this.DGV.Location = new System.Drawing.Point(37, 241);
             this.DGV.Name = "DGV";
             this.DGV.Size = new System.Drawing.Size(408, 150);
             this.DGV.TabIndex = 16;
+            this.DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellClick);
+            // 
+            // DGV_ID
+            // 
+            this.DGV_ID.HeaderText = "ID";
+            this.DGV_ID.Name = "DGV_ID";
+            // 
+            // DGV_Maricule
+            // 
+            this.DGV_Maricule.HeaderText = "Matricule";
+            this.DGV_Maricule.Name = "DGV_Maricule";
+            // 
+            // DGV_Portes
+            // 
+            this.DGV_Portes.HeaderText = "Portes";
+            this.DGV_Portes.Name = "DGV_Portes";
+            // 
+            // DGV_Color
+            // 
+            this.DGV_Color.HeaderText = "Couleur";
+            this.DGV_Color.Name = "DGV_Color";
+            // 
+            // DGV_Marque
+            // 
+            this.DGV_Marque.HeaderText = "Marque";
+            this.DGV_Marque.Name = "DGV_Marque";
             // 
             // Btn_First
             // 
@@ -214,6 +256,7 @@
             this.Btn_First.TabIndex = 17;
             this.Btn_First.Text = "<<";
             this.Btn_First.UseVisualStyleBackColor = true;
+            this.Btn_First.Click += new System.EventHandler(this.Btn_First_Click);
             // 
             // Btn_Last
             // 
@@ -223,6 +266,7 @@
             this.Btn_Last.TabIndex = 18;
             this.Btn_Last.Text = ">>";
             this.Btn_Last.UseVisualStyleBackColor = true;
+            this.Btn_Last.Click += new System.EventHandler(this.Btn_Last_Click);
             // 
             // Btn_Precedent
             // 
@@ -232,6 +276,7 @@
             this.Btn_Precedent.TabIndex = 19;
             this.Btn_Precedent.Text = "<";
             this.Btn_Precedent.UseVisualStyleBackColor = true;
+            this.Btn_Precedent.Click += new System.EventHandler(this.Btn_Precedent_Click);
             // 
             // Btn_Suivant
             // 
@@ -241,6 +286,7 @@
             this.Btn_Suivant.TabIndex = 20;
             this.Btn_Suivant.Text = ">";
             this.Btn_Suivant.UseVisualStyleBackColor = true;
+            this.Btn_Suivant.Click += new System.EventHandler(this.Btn_Suivant_Click);
             // 
             // Application
             // 
@@ -302,6 +348,11 @@
         private System.Windows.Forms.Button Btn_Last;
         private System.Windows.Forms.Button Btn_Precedent;
         private System.Windows.Forms.Button Btn_Suivant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DGV_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DGV_Maricule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DGV_Portes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DGV_Color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DGV_Marque;
     }
 }
 
